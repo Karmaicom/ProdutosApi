@@ -17,7 +17,7 @@ namespace ProdutosApi.Infra.Data.Repositories
 
         public void Alterar(Produto entity)
         {
-            string query = @"update produto(nome = @Nome, preco = @Preco, quantidade = @Quantidade, datacadastro = @DataCadastro) where idProduto = @IdProduto";
+            string query = @"update produto set nome=@Nome, preco=@Preco, quantidade=@Quantidade, datacadastro=@DataCadastro where idProduto = @IdProduto";
 
             using (var connection = new SqlConnection(_connectionString))
             {

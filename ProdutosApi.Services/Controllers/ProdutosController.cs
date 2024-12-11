@@ -97,6 +97,8 @@ namespace ProdutosApi.Services.Controllers
                     produto.Preco = request.Preco;
                     produto.Quantidade= request.Quantidade;
 
+                    _produtoRepository.Alterar(produto);
+
                     return StatusCode(200, new { mensagem = "Dados atualizados com sucesso!", produto });
                 }
                 else
